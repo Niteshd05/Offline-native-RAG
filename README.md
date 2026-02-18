@@ -104,11 +104,7 @@ This prevents:
 - OS memory kills
 - Context truncation issues
 
----
 
-Here is your section in **clean, properly formatted, paste-ready Markdown**:
-
-````markdown
 ---
 
 ### 3️⃣ RAM Headroom Management
@@ -214,8 +210,4 @@ MIT License
 **Nitesh Domal**
 Exploring Edge AI, Generative Systems, and Privacy-First Architectures.
 
-```
-
-If you want, I can also format this into a **visually stronger GitHub-style README section hierarchy** with consistent numbering and no duplication between RAM usage values (currently 1.2GB vs 600MB mismatch).
-```
 
