@@ -106,88 +106,116 @@ This prevents:
 
 ---
 
+Here is your section in **clean, properly formatted, paste-ready Markdown**:
+
+````markdown
+---
+
 ### 3️⃣ RAM Headroom Management
 
 Loading two `.gguf` models simultaneously is volatile on mobile unified memory.
 
-Key optimizations:
-- Quantized models (Q4_K_M)
+#### Key Optimizations
+- Quantized models (`Q4_K_M`)
 - `use_mlock: true`
 - Reduced batch size
 - Strict inference settings
 
-Final footprint:
-~1.2GB RAM usage  
+**Final footprint:** ~1.2GB RAM usage  
+
 Leaves safe headroom for:
 - React Native UI thread
 - Smooth 60fps rendering
 - Stable background processing
 
-2️⃣ Install Dependencies
-npm install
+---
 
+## 🚀 Setup Instructions
+
+### 2️⃣ Install Dependencies
+
+```bash
+npm install
+````
 
 For iOS:
 
+```bash
 cd ios
 pod install
 cd ..
+```
 
-3️⃣ Run the App
+---
+
+### 3️⃣ Run the App
 
 For Android:
 
+```bash
 npx react-native run-android
-
+```
 
 For iOS:
 
+```bash
 npx react-native run-ios
+```
 
-📥 First Launch Behavior
+---
+
+## 📥 First Launch Behavior
 
 On first launch:
 
-The app automatically downloads the required .gguf models
-
-Models are stored in the device's document directory
-
-This is the only time internet access is required
+* The app automatically downloads the required `.gguf` models
+* Models are stored in the device's document directory
+* This is the only time internet access is required
 
 After that:
 
-The system runs completely offline
+* The system runs completely offline
+* No network requests are made
+* All inference happens locally
 
-No network requests are made
+---
 
-All inference happens locally
+## 📊 Performance Benchmarks (Mid-Range Android)
 
-📊 Performance Benchmarks (Mid-Range Android)
-Metric	Result
-Embedding Time	~150–250ms
-Vector Search	<50ms (small dataset)
-Generation Latency	1–3s
-RAM Usage	~600MB
-Offline Capability	100%
-🔮 Future Improvements
+| Metric             | Result                |
+| ------------------ | --------------------- |
+| Embedding Time     | ~150–250ms            |
+| Vector Search      | <50ms (small dataset) |
+| Generation Latency | 1–3s                  |
+| RAM Usage          | ~600MB                |
+| Offline Capability | 100%                  |
 
-ANN search (HNSW in JS or WASM)
+---
 
-Streaming token output
+## 🔮 Future Improvements
 
-PDF ingestion support
+* ANN search (HNSW in JS or WASM)
+* Streaming token output
+* PDF ingestion support
+* Persistent chat memory
+* On-device quantization selection
+* iOS memory tuning
 
-Persistent chat memory
+---
 
-On-device quantization selection
-
-iOS memory tuning
-
-📜 License
+## 📜 License
 
 MIT License
 
-👨‍💻 Author
+---
 
-Nitesh Domal
+## 👨‍💻 Author
+
+**Nitesh Domal**
 Exploring Edge AI, Generative Systems, and Privacy-First Architectures.
+
+```
+
+If you want, I can also format this into a **visually stronger GitHub-style README section hierarchy** with consistent numbering and no duplication between RAM usage values (currently 1.2GB vs 600MB mismatch).
+```
+
